@@ -1,0 +1,80 @@
+/* App.css */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #f9f9f9; /* Light background */
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height to prevent jumping */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    overflow: hidden; /* Prevents overflow issues */
+  }
+  
+  h1 {
+    color: #4caf50; /* Green color */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-container {
+    width: 100%;
+  }
+  
+  .search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .beer-list {
+    flex: 1; /* Allows the beer list to fill remaining space */
+    overflow-y: auto; /* Scroll only when needed */
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap; /* Prevents line breaks inside items */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add "..." for overflowing content */
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  li strong {
+    color: #4caf50;
+  }
+  
+  li span {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
@@ -156,8 +157,9 @@ func main() {
 	defer db.Close()
 
 	router := gin.Default()
+	router.Use(cors.Default())
 
-	router.GET("/beers/", func(c *gin.Context) {
+	router.GET("/beers", func(c *gin.Context) {
 		search := c.Query("search")
 		beers := queryDatabase(db, search)
 		c.IndentedJSON(http.StatusOK, beers)
